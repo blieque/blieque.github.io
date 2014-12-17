@@ -1,10 +1,10 @@
 name: "Programming with Tea"
-description: "The journal of a young British web designer and developer, who refuses to board the developers-drink-coffee bandwaggon."
+description: "The journal of a British web designer and developer, who refuses to board the developers-drink-coffee bandwaggon."
 
 url: "https://blieque.github.io"
 
 paginate: 10
-paginate_path: "blog/page-:num/"
+paginate_path: "page-:num/"
 
 markdown: rdiscount
 permalink: pretty

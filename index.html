@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>{{ site.name }}</title>
-		<link rel="stylesheet" href="css/main.css">
-	</head>
-	<body>
-		<header>
-			<h1>{{ site.name }}</h1>
-		</header>
-		<section>
-			{% for post in site.posts limit: 10 %}
-				<a href="{{ post.url }}">{{ post.title }}</a><br>
-			{% endfor %}
+---
+layout:	home
+title:	Home
+---
 
-			Showing page {{ page }} of {{ total_pages }}.
-			<a href="{{ prev_page_path }}">Previous page (page {{prev_page}})</a>
-			<a href="{{ next_page_path }}">Next page (page {{next_page}})</a>
-		</section>
-		<footer>
-			Links to things, maybe
-		</footer>
-	</body>
-</html>
+{% for post in paginator.posts limit: 10 %}
+	<a href="{{ post.url }}">{{ post.title }}</a><br>
+{% endfor %}
+
+{% if paginator.previous_page %}
+	<a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+{% endif %}
+
+<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+{% if paginator.next_page %}
+	<a href="{{ paginator.next_page_path }}" class="next">Next</a>
+{% else %}
+	<span class="next ">Next</span>
+{% endif %}
