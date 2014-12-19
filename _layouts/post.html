@@ -1,5 +1,16 @@
 {% include header.html %}
-<section>
-	{{ content }}
-</section>
+
+{{ content }}
+<form>
+	<h3>Submit a Comment</h3>
+
+	<label for="name">Name:</label><br>
+	<input type="text" id="name" name="name" placeholder="lol this wont actually work"><br>
+
+	<label for="comment">Comment:</label><br>
+	<textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
+
+	<input type="submit">
+</form>
+
 {% include footer.html %}

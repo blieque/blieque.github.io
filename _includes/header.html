@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>{{ page.title }} &ndash; {{ site.name }}</title>
-		<link rel="stylesheet" href="css/main.css">
+		<title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.name }}</title>
+		<link rel="stylesheet" href="/css/main.css">
 	</head>
 	<body>
 		<header>
-			<h1>{{ site.name }}</h1>
+			<div>
+				<a href="/" id="hn">{{ site.name }}</a><span id="hns">{{ site.subname }}</span>
+			</div>
 		</header>
+		<section>
