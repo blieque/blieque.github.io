@@ -1,10 +1,10 @@
-name: "h tea m l"
+name: "hteaml"
 subname: "programming without coffee"
-description: "The journal of a British web designer and developer, who refuses to board the developers-drink-coffee bandwaggon."
+description: "The journal of a British web designer and developer, who refuses to board the developers-drink-coffee bandwaggon. I write about the events of my life, and perhaps programming sometimes too."
 
 url: "https://blieque.github.io"
 
-paginate: 10
+paginate: 12
 paginate_path: "page-:num/"
 
 markdown: rdiscount
