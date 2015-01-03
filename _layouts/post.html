@@ -1,16 +1,29 @@
 {% include header.html %}
 
-{{ content }}
-<form>
-	<h3>Submit a Comment</h3>
-
-	<label for="name">Name:</label><br>
-	<input type="text" id="name" name="name" placeholder="lol this wont actually work"><br>
-
-	<label for="comment">Comment:</label><br>
-	<textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
-
-	<input type="submit">
-</form>
+<article>
+	<h1>{{ page.title }}</h1>
+	{%	assign dom = page.date | date:"%-d" %}
+	{%	if dom == 1 or dom == 21 or dom == 31 %}
+	{%		assign date_suffix = "st" %}
+	{%	elsif dom == 2 or dom == 22 %}
+	{%		assign date_suffix = "nd" %}
+	{%	elsif dom == 3 or dom == 23 %}
+	{%		assign date_suffix = "rd" %}
+	{%	else %}
+	{%		assign date_suffix = "th" %}
+	{%	endif %}
+	<div>Written {{ page.date | date:"%-d" }}<sup>{{ date_suffix }}</sup> {{ page.date | date:"%B %Y" }}</div>
+	{{ content }}
+</article>
+<aside>
+	<h3>Who wrote that?</h3>
+	<div>
+		<div>BM avatar image</div>
+		<a id="sw" href="https://blieque.co.uk/">Website</a><a id="sg" href="https://github.com/blieque">GitHub</a><a id="sl" href="http://lab.blieque.co.uk/">lab.blieque</a><a id="st" href="https://twitter.com/blieque">Twitter</a><a id="sf" href="https://www.facebook.com/blieque.m">Facebook</a><a id="sp" href="https://plus.google.com/u/0/110877141200260184421">Google+</a><a id="sy" href="https://www.youtube.com/blieque">YouTube</a>
+	</div>
+	<p>
+		I go by the name Blieque Mariguan, and I reside in Britain. I like to build pages using web technology like HTML, CSS, JavaScript, et cetera. I also occasionally stick my toes in the waters of Python and Ruby, and fumble around unsuccessfully with things like C and C++. Was I supposed to write in third person for this?
+	</p>
+</aside>
 
 {% include footer.html %}

@@ -2,23 +2,13 @@
 layout:	home
 ---
 
-{% for post in paginator.posts limit: 12 %}
+{% for post in paginator.posts limit: site.paginate %}
 <article>
-	<a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
-	<p>{{ post.content | strip_html | truncatewords 128 }}</p>
+	<h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+	{% assign good_excerpt_array = post.content | split:"<p>" %}
+	{% assign good_excerpt_array = good_excerpt_array[1] | split:"</p>" %}
+	{% assign good_excerpt = good_excerpt_array[0] | strip_html | truncatewords: 200,"" %}
+
+	<p>{{ good_excerpt }} &mdash; <a href="{{ site.url }}{{ post.url }}"><em>read more</em></a></p>
 </article>
 {% endfor %}
-
-<nav>
-
-	{% if paginator.previous_page %}
-	<a href="{{ paginator.previous_page_path }}" class="previous">newer guff</a>
-	{% endif %}
-
-	page {{ paginator.page }}/{{ paginator.total_pages }}
-
-	{% if paginator.next_page %}
-	<a href="{{ paginator.next_page_path }}" class="next">older guff</a>
-	{% endif %}
-	
-</nav>
