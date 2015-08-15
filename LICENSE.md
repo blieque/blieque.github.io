@@ -1,3 +1,7 @@
+# Licensing of hteaml
+
+The source code of this website ([blieque.github.io](https://blieque.github.io)) is distributed under the terms of the MIT license, detailed below. The text files found in the `/_posts` directory of the repository are distributed under the terms of the Creative Commons BY-SA 4.0 license. The BY-SA license can be found [here](http://creativecommons.org/licenses/by-sa/4.0/legalcode).
+
 ## The MIT License
 
 Copyright (c) 2015 Blieque Mariguan
