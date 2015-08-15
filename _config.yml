@@ -4,10 +4,10 @@ description: "The journal of a British web designer and developer, who refuses t
 
 url: "https://blieque.github.io"
 
-paginate: 12
+paginate: 6
 paginate_path: "page-:num/"
 
 markdown: rdiscount
-permalink: pretty
+permalink: /:categories/:year/:month/:title
 
 exclude: [ 'README.md', 'LICENSE.md', 'Gemfile.lock', 'Gemfile' ]

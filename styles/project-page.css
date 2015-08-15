@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+body {
+	margin:0;
+	font-family:droid sans,helvetica neue,sans-serif;
+}
+section,footer {
+	margin:1.4em auto;
+	width:60%;
+	min-width:300px;
+	max-width:1200px;
+	background:#fff;
+}
+footer {
+	padding-top:1em;
+	border-top:1px solid #cfcfcf;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin-top:0;
+}
+pre {
+	padding:.8em;
+	background:#f3f3f3;
+	border:1px solid #e7e7e7;
+}
+pre>div:first-child {
+	margin:-.8em -.8em .8em;
+	padding:.4em .8em;
+	background:#e7e7e7;
+}

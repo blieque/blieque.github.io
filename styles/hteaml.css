@@ -1,6 +1,7 @@
 /* typography */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+/*@import url(https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic);*/
 
 /* elements */
 html,body {
@@ -11,7 +12,7 @@ body {
 	color:#121212;
 	background:#eee;
 	font-size:11pt;
-	font-family:roboto slab,helvetica neue,lucida sans,sans-serif;
+	font-family:alegreya,roboto slab,helvetica neue,lucida sans,sans-serif;
 	line-height:1.6;
 }
 #hn,h1,h2,h3,h4,h5,h6 {
@@ -71,9 +72,9 @@ footer,article>h1+div,aside {
 	font-size:95%;
 }
 #hn,aside>div a {
-	background:url(/assets/img/sprite.png);
+	background:url(/images/sprite.png);
 	/* imperfect but functional */
-	background:linear-gradient(transparent,transparent),url(/assets/img/sprite.svg);
+	/*background:linear-gradient(transparent,transparent),url(/images/sprite.svg);*/
 }
 
 /* header */
