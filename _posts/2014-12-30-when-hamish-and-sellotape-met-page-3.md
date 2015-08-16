@@ -1,6 +1,6 @@
 ---
-layout:	post
-title:	When Hamish and Sellotape Met Page 3
+layout: post
+title:  When Hamish and Sellotape Met Page 3
 ---
 
 A story so worth remembering in detail, I thought it wise to create a blog system with Jekyll to tell the tale of When Hamish and Sellotape Met Page 3. My intention was to build the blog in a matter of hours &ndash; or, perhaps more realistically, a few days &ndash; and then write this post with the events of 12^th December, 2014 fresh in my mind. As is typical of times when I come up with such organised and efficient ideas, my plan failed spectacularly. It's only now, eighteen days on, that I recall the adventure of my friends' and mine.
