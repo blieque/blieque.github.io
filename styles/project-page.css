@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono:400);
 
 body {
     margin:0;
@@ -12,19 +13,38 @@ section,footer {
     background:#fff;
 }
 footer {
-    padding-top:1em;
+    padding-top:1.6em;
     border-top:1px solid #cfcfcf;
 }
 h1,h2,h3,h4,h5,h6 {
     margin-top:0;
 }
-pre {
-    padding:.8em;
-    background:#f3f3f3;
-    border:1px solid #e7e7e7;
+h6 { /* code snippet headings */
+    margin-bottom:0;
+    background:#242424!important;
+    font-weight:normal;
+    border-radius:.8em .8em 0 0;
 }
-pre>div:first-child {
-    margin:-.8em -.8em .8em;
-    padding:.4em .8em;
-    background:#e7e7e7;
+pre {
+    border-radius:.8em;
+}
+h6+pre {
+    border-radius:0 0 .8em .8em;
+    margin-top:0;
+}
+pre,h6 {
+    padding:.8em;
+}
+h6,pre,code {
+    font-family:droid sans mono,monaco,consolas,monospace;
+    font-size:10pt;
+    background:#eee;
+}
+h6,pre,pre>code {
+    color:#ddd;
+    background:#363636;
+}
+:not(pre) code {
+    padding:0 .2em .2em;
+    border-radius:.2em;
 }
