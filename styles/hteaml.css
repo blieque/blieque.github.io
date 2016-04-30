@@ -52,6 +52,11 @@ main a:visited:hover {
 }
 h1 a,h2 a,h3 a,h3 a,h5 a,h6 a {
     padding-bottom:2px;
+    color:inherit!important;
+    box-shadow:inset 0 -8px 0 0 #ededed,inset 0 -12px 0 0 #bfd7ff;
+}
+h1 a:hover,h2 a:hover,h3 a:hover,h3 a:hover,h5 a:hover,h6 a:hover {
+    box-shadow:inset 0 -4px 0 0 #ededed,inset 0 -8px 0 0 #bfd7ff;
 }
 sup,sub {
     padding-left:.2em;
