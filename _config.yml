@@ -8,6 +8,7 @@ url: "https://blieque.github.dev"
 
 # build
 
+repository: "blieque/blieque.github.io"
 destination: "/srv/hosts/dev.github.blieque"
 
 paginate: 6
