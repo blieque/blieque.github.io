@@ -1,8 +1,15 @@
+# site
+
 name: "hteaml"
 subname: "programming without coffee"
 description: "The journal of a British web designer and developer, who refuses to board the developers-drink-coffee bandwaggon. I write about the events of my life, and perhaps programming sometimes too."
 
-url: "https://blieque.github.io"
+url: "https://blieque.github.dev"
+
+# build
+
+repository: "blieque/blieque.github.io"
+destination: "/srv/hosts/dev.github.blieque"
 
 paginate: 6
 paginate_path: "page-:num/"
@@ -11,3 +18,6 @@ markdown: rdiscount
 permalink: /:categories/:year/:month/:title.html
 
 exclude: [ 'README.md', 'LICENSE.md', 'Gemfile.lock', 'Gemfile' ]
+
+compress_html:
+    clippings: all
