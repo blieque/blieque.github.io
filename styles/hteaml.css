@@ -16,7 +16,6 @@ body {
 }
 #hn,h1,h2,h3,h4,h5,h6 {
     margin:-.32em 0 .8em;
-    font-family:palanquin dark,franklin gothic book,helvetica neue,sans-serif;
     letter-spacing:.01em;
 }
 p+h1,p+h2,p+h3,p+h4,p+h5,p+h6 {
@@ -53,10 +52,10 @@ main a:visited:hover {
 h1 a,h2 a,h3 a,h3 a,h5 a,h6 a {
     padding-bottom:2px;
     color:inherit!important;
-    box-shadow:inset 0 -8px 0 0 #ededed,inset 0 -12px 0 0 #bfd7ff;
+    box-shadow:inset 0 -10px 0 0 #ededed,inset 0 -14px 0 0 #bfd7ff;
 }
 h1 a:hover,h2 a:hover,h3 a:hover,h3 a:hover,h5 a:hover,h6 a:hover {
-    box-shadow:inset 0 -4px 0 0 #ededed,inset 0 -8px 0 0 #bfd7ff;
+    box-shadow:inset 0 -10px 0 0 #ededed,inset 0 -14px 0 0 #526380;
 }
 sup,sub {
     padding-left:.2em;
@@ -82,6 +81,7 @@ div.img a,div.img div {
     box-shadow:none;
 }
 div.img img {
+    width:100%;
     display:block;
 }
 div.img div {
@@ -97,7 +97,7 @@ div.img div:last-child,div.img.twin div:nth-last-child(2) {
 div.img.twin a,div.img.twin div:not(.one-caption) {
     width:calc(50% - 15px)
 }
-div.img.twin a:nth-of-type(2n),div.img.twin div:last-of-type {
+div.img.twin a:nth-of-type(2n),div.img.twin div:nth-of-type(2n) {
     margin-left:30px;
 }
 div.img a:nth-child(n + 2) {
@@ -108,6 +108,9 @@ div.img.twin a:nth-of-type(2) {
 }
 
 /* essentially classes */
+#hn,h1,h2,h3,h4,h5,h6,thead,th,.edit {
+    font-family:palanquin dark,franklin gothic book,helvetica neue,sans-serif;
+}
 header,#pg a,#pg div,article>h1+div {
     color:#fff!important;
     background:#121212;
@@ -129,7 +132,6 @@ footer,article>h1+div,aside {
     background:url(/images/sprite.png);
     /* imperfect but functional */
     background:linear-gradient(transparent,transparent),url(/images/sprite.svg);
-    background-size:130%;
 }
 
 /* header */
@@ -141,6 +143,7 @@ header>div,main>div,footer>div {
 }
 header {
     font-size:13pt;
+    transition:all linear .25s;
 }
 header span {
     display:inline-block;
@@ -165,6 +168,15 @@ article>:last-child {
 aside :last-child {
     margin-bottom:0;
 }
+article>h1+div {
+    display:inline-block;
+    margin-bottom:.4em;
+    padding:.2em .6em;
+    font-style:italic;
+}
+article p {
+    margin:1.4em 0;
+}
 article>p:first-of-type:first-letter {
     margin:.1em .12em 0 .05em;
     float:left;
@@ -174,14 +186,32 @@ article>p:first-of-type:first-letter {
 article>p:first-of-type {
     text-indent:-.3em;
 }
-article>h1+div {
-    display:inline-block;
-    margin-bottom:.4em;
-    padding:.2em .6em;
-    font-style:italic;
+blockquote {
+    margin:2em 0 1.8em 2em;
+    padding:0 1.4em;
+    background:#fff;
 }
-article>p {
-    margin:1.4em 0;
+blockquote p {
+    margin:1.9em 0 1em;
+}
+blockquote:before,blockquote:after {
+    content:'';
+    display:table;
+}
+.edit {
+    display:inline-block;
+    margin:-0.45em 0 0 2.8em;
+    padding:.25em .6em .35em;
+    position:absolute;
+    color:#fff;
+    background:#444;
+}
+.edit:before {
+    content:'Edit';
+}
+article .unkern {
+    display:inline-block;
+    text-indent:-.2em;
 }
 article>h1 {
     line-height:1.4;
@@ -212,7 +242,7 @@ aside {
     background:#fff;
     line-height:1.5;
 }
-aside>div,aside>p {
+aside>div,aside p {
     display:inline-block;
 }
 aside>div {
@@ -230,7 +260,7 @@ aside>div div {
     -webkit-border-radius:100px;
     border-radius:100px;
 }
-aside>p {
+aside p {
     margin:-.32em 0 0 0;
     width:calc(100% - 246px - 3em);
     vertical-align:top;
@@ -244,7 +274,6 @@ aside>div a {
     position:relative;
     box-shadow:none!important;
     text-indent:-999em;
-    background-size:830%; /* no idea */
 }
 aside>div a:nth-of-type(3n) {
     margin-right:0;
@@ -286,7 +315,6 @@ thead {
     background:#eee;
 }
 thead,th {
-    font-family:palanquin dark,franklin gothic book,helvetica neue,sans-serif;
     text-align:left;
     vertical-align:bottom;
 }
@@ -377,7 +405,7 @@ footer a {
     aside>div div {
         margin:0 0 1.2em;
     }
-    aside>p {
+    aside p {
         width:calc(100% - 100px - 3.2em);
     }
 }
@@ -404,7 +432,7 @@ footer a {
     nav a:last-child {
         right:1em;
     }
-    aside>div,aside>p {
+    aside>div,aside p {
         display:block;
         width:100%;
     }
